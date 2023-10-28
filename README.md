@@ -34,6 +34,17 @@ Then you'll need to create the backend app :
 nx g @nxrocks/nx-quarkus:project backend --projectType application --buildSystem MAVEN --groupId org.yourcaryourway --artifactId backend --directory .
 ````
 
+Then for the front end you'll need to add Angular :
+
+````bash
+npm install -D @nx/angular
+````
+
+And then install the to nx monorepo an new Angular Project :
+
+````bash
+nx g @nx/angular:app --name chatapp --directory frontend --routing true --standalone true --addTailwind true --backendProject backend --e2eTestRunner cypress --style scss --unitTestRunner jest
+````
 
 
 

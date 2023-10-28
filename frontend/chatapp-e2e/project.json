@@ -1,0 +1,33 @@
+{
+  "name": "frontend--chatapp-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "frontend/chatapp-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "frontend/chatapp-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "frontend--chatapp:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "frontend--chatapp:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "frontend--chatapp:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["frontend/chatapp-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["frontend--chatapp"]
+}
