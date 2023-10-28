@@ -19,6 +19,9 @@
     },
     "e2e": {
       "cache": true
+    },
+    "install": {
+      "cache": true
     }
   },
   "namedInputs": {
@@ -31,5 +34,8 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "NGMyMmY0NDYtMmY1NC00YWEzLWFjM2QtYWQ5OTk4NzcwN2U1fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "NGMyMmY0NDYtMmY1NC00YWEzLWFjM2QtYWQ5OTk4NzcwN2U1fHJlYWQtd3JpdGU=",
+  "plugins": [
+    "@nxrocks/nx-quarkus"
+  ]
 }

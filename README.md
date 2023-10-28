@@ -12,6 +12,31 @@ Run `nx list` to get a list of available plugins and whether they have generator
 
 Learn more about [Nx generators on the docs](https://nx.dev/plugin-features/use-code-generators).
 
+
+
+To create nx-quarkus, you'll need to create an nx workspace :
+
+```bash
+npx create-nx-workspace@latest
+```
+
+
+Then install the @nxrocks/nx-quarkus library. Use :
+
+```bash
+npm install @nxrocks/nx-quarkus --save-dev
+```
+
+Then you'll need to create the backend app :
+
+
+````bash
+nx g @nxrocks/nx-quarkus:project backend --projectType application --buildSystem MAVEN --groupId org.yourcaryourway --artifactId backend --directory .
+````
+
+
+
+
 ## Running tasks
 
 To execute tasks with Nx use the following syntax:
