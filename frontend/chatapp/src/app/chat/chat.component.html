@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <title>ChatUi</title>
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<div class="container mx-auto">
+  <img src="../../assets/banner.png" alt="banner" />
+</div>
+<div class="container mx-auto">
+  <br/>
+  <div class="flex flex-col">
+    <input id="name" class="col-md-4" type="text" placeholder="your name" [formControl]="usrControl">
+    <button id="connect" class="btn-primary" type="button" (click)="getUsername()">connect</button>
+    <br/>
+    <br/>
+  </div>
+  <div class="flex flex-col">
+    <ul>
+      <li *ngFor="let message of messages">{{ message }}</li>
+    </ul>
+  </div>
+  <div class="flex flex-col">
+    <input class="col-md-6" id="msg" type="text" placeholder="enter your message" [formControl]="msgControl">
+    <button class="btn-primary" id="send" type="button" (click)="sendMessage()">send</button>
+  </div>
+
+</div>
