@@ -54,3 +54,20 @@ nx dev backend
 ## Dockerize the application
 
 To run these app on docker, you'll need to use the docker-compose with the two images backend and frontend :
+
+qwincy/nx-chatapp-frontend:1.0.0 & qwincy/nx-chatapp-backend:1.0.0
+
+To do that, you have to type those two commands :
+
+````bash
+docker run -it -d --rm -p8011:8011 qwincy/nx-chatapp-backend:1.0.0
+````
+
+
+
+````bash
+docker run -it -d --rm -p4200:4200 qwincy/nx-chatapp-frontend:1.0.0
+````
+
+
+
